@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="quizicon.png"> <!--Favicon Code-->
+    <title>MyQuizApp</title>
+    <link rel="stylesheet" href="main1.css">
+    <link href='https://fonts.googleapis.com/css?family=Bebas Neue' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+</head>
+<body id="startpagebody" >
+    <!--start page -->
+    <div class="startpagebox">
+        <h1>Let's Play!</h1>
+        <h2>Category - Animals</h2>
+        <button id='start' class="timerbtn"> Let's Start!</button>
+    </div>
+    <!--question and options-->
+    <div class="timer">
+        <div class="timerbar1"></div>
+        <div class="timerbarvalue">60</div>
+    </div>
+    <div class="questionpagebox">
+        <div class="question question1" ></div>
+        <div class="answerContainer">
+            <div class="answer answera"></div>
+            <div class="answer answerb"></div>
+            <div class="answer answerc"></div>
+            <div class="answer answerd"></div>
+        </div>
+        <button class = "nextbutton timerbtn" id="nextbtn1">Next</button>
+    </div>
+    <div class="endpage">
+        <h2>Hooray! <br> 
+            You are Finished
+        </h2><br>
+        <h3 id="displayScore">0</h3>
+        <button class = "rtrnbutton" id="return">Home</button>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
+<!--.timerbar1{
+    border:1px solid green;
+    background-color: green; /* Old browsers */
+    background: -moz-linear-gradient(to top, #002400 0%, #005700 17%, #008a00 33%, #52b152 67%, #83c783 83%, #b4ddb4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    position: absolute;
+    width: 0%;
+    z-index: 1;
+    height: 0.7em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+ /*   padding-left: 4em;
+    padding-right: 5em; */
+}
+
+.timerbar2{
+    border:1px solid green;
+    background-color: rgb(146, 245, 18); /* Old browsers */
+    position: absolute;
+    width:95%;
+    z-index: 0;
+    height: 0.7em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
+   /* padding-left: 4em;
+    padding-right: 5em*/}-->

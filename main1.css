@@ -1,0 +1,236 @@
+
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body{
+    background-image: url(farm.jpg);
+    background-color: purple;
+    background-size: cover;
+    background-position:center center;
+    background-repeat: repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.startpagebox{
+    background-image: url(farm.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2rem;
+}
+
+.endpage{
+    background-image: url(congrats.jpg);
+    background-color: blue;
+    background-size: cover;
+    text-align: center;
+    background-position: top center;
+    background-repeat: no-repeat;  
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 2rem;
+}
+
+h1,h2{
+    color: white;
+    font-size: 2em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h3 {
+    color: white;
+    font-size: 2em;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+#start{
+    color: white;
+    font-size: 36px;
+    padding: 0.5em;
+    background-color: #008000;
+    height: 2.5em;
+    width: 7em;
+    margin-top: 4em;
+    border: 1px solid #fff;
+    border-radius: 0.2em;
+    background: -moz-linear-gradient(to top, #002400 0%, #005700 17%, #008a00 33%, #52b152 67%, #83c783 83%, #b4ddb4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   box-shadow: 11px 9px 5px -3px rgba(0,36,0,0.75);
+-webkit-box-shadow: 11px 9px 5px -3px rgba(0,36,0,0.75);
+-moz-box-shadow: 11px 9px 5px -3px rgba(0,36,0,0.75);
+    cursor: pointer;
+}
+
+.questionpagebox{
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+/*background of timer*/
+.timer{
+display: none;
+ align-items:flex-end;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-top: 3em;
+ margin-right: 4em;
+ height: 7em;
+ width: 7em;
+ border-radius: 50%;
+ background-color: #ebc763;
+ position: relative;
+ float:right;
+ -webkit-box-shadow:0 0 3em #ffeb34; 
+-moz-box-shadow: 0 0 3em #ffeb34; 
+box-shadow:0 0 3em #ffeb34;
+  
+}
+/*coundown *ring* section of timer*/ 
+.timerbar1{
+    position: relative;
+    height: 7em;
+    width:7em;
+    background-color: rgb(255, 136, 0);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/*inner section of timer*/
+.timerbar1::before{
+    font-family:'Roboto', sans-serif;
+content: "";
+position: absolute;
+background-color: #fcf052;
+height:85%;
+width: 85%;
+border-radius: 50%;
+box-shadow:
+ inset 0 0 60px whitesmoke,
+ inset 20px 0 80px rgb(255, 187, 0),
+ inset -20px 0 80px rgb(255, 243, 81),
+ inset 20px 0 300px rgb(255, 187, 0),
+ inset -20px 0 300px rgb(255, 243, 81),
+ 0 0 50px #fff,
+ -10px 0 80px rgb(255, 187, 0),
+ 10px 0 80px rgb(255, 243, 81);   
+
+
+}
+/*due to box shadow at timerbar1::before, this selctor no longer works. may need to reactivate if needed.
+/*#timerbarvalue{
+position: absolute;
+color: #45118f;
+font-size: 4em;
+font-family:'Roboto', sans-serif;
+}
+*/
+.question{
+    color: green;
+    background-color: #6bd494;
+    font-size: 2.2em;
+    text-align: center;
+    border: 3px solid green;
+    border-radius: 10px;
+    height: max-content;
+    width: 60vw;
+    padding: 0.1em 0em;
+    margin-top: 4em;
+    margin-bottom:2.5em;
+
+}
+.answerContainer{
+    margin-bottom: 1.5em;
+    margin-top: 0.5em;
+    
+}
+.answer{
+    color: black;
+    text-align: center;
+    background-color: white;
+    font-size: 1.5rem;
+    border: 3px solid purple;
+    border-radius: 10px;
+    line-height:2em;
+    height: 2em;
+    width: 40vw;
+    margin-top: 0.2em;
+    margin-bottom:0.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor:pointer;
+    
+}
+
+.answer:hover{
+    background-color: #da69da;
+    
+}
+
+.nextbutton{
+    color: white;
+    background-color: #005700;
+    font-size: 1.2rem;
+    line-height: 1.6em;
+    height: 1.6em;
+    width: 4em;
+    position:absolute;
+    bottom: 10%;
+    right: 12%;
+    border: 1px solid #fff;
+    border-radius: 0.2em;
+    background: -moz-linear-gradient(to top, rgb(0, 36, 0) 0%, #005700 17%, #008a00 33%, #52b152 67%, #83c783 83%, #b4ddb4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   box-shadow: 11px 9px 5px -3px #002400bf;
+-webkit-box-shadow: 11px 9px 5px -3px #002400bf;
+-moz-box-shadow: 11px 9px 5px -3px #002400bf;
+    cursor: pointer;
+
+}
+
+.rtrnbutton { 
+    color: white;
+    background-color: #005700;
+    font-size: 1.2em;
+    height: 2em;
+    width: 5em;
+    line-height: 2em;
+    position: relative;
+    top: 8%;
+    bottom: 10%;
+    border: 1px solid #fff;
+    border-radius: 0.2em;
+    background: -moz-linear-gradient(to top, rgb(0, 36, 0) 0%, #005700 17%, #008a00 33%, #52b152 67%, #83c783 83%, #b4ddb4 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, #002400 0%,#005700 17%,#008a00 33%,#52b152 67%,#83c783 83%,#b4ddb4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   box-shadow: 11px 9px 5px -3px #002400bf;
+-webkit-box-shadow: 11px 9px 5px -3px #002400bf;
+-moz-box-shadow: 11px 9px 5px -3px #002400bf;
+    cursor: pointer;
+}
